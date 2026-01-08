@@ -41,6 +41,8 @@
 //     console.log(`Enter Valid Time`)
 // }
 
+
+
 // if(a >= b) {
 //     console.log(`A is Greater`)
 // } else if (b >= a) {
@@ -57,31 +59,76 @@
 // const data = ['Reshab', 'Kumar', 'Bihar']
 // // console.log(typeof(data))
 
-const obj = {
-  fname: "Reshab",
-  lanme: "Kumar",
-  city: "Vaishali",
-  state: "Bihar",
-};
+// const obj = {
+//   fname: "Reshab",
+//   lanme: "Kumar",
+//   city: "Vaishali",
+//   state: "Bihar",
+// };
 
 // console.log(obj.city);
 
-const facultyOfCodingThinker = [
-  {
-    faculty_id: 1,
-    faculty_name: "Reshab Kumar",
-    faculty_subject: "FSD",
-  },
-  {
-    faculty_id: 2,
-    faculty_name: "Ravi Kumar",
-    faculty_subject: "Java FSD",
-  },
-  {
-    faculty_id: 3,
-    faculty_name: "Baibhav Kumar",
-    faculty_subject: "HTML",
-  },
-];
+// const facultyOfCodingThinker = [
+//   {
+//     faculty_id: 1,
+//     faculty_name: "Reshab Kumar",
+//     faculty_subject: "FSD",
+//   },
+//   {
+//     faculty_id: 2,
+//     faculty_name: "Ravi Kumar",
+//     faculty_subject: "Java FSD",
+//   },
+//   {
+//     faculty_id: 3,
+//     faculty_name: "Baibhav Kumar",
+//     faculty_subject: "HTML",
+//   },
+// ];
 
-console.log(facultyOfCodingThinker[1].faculty_subject);
+// console.log(facultyOfCodingThinker[1].faculty_subject);
+
+
+// const arr = ["App", "Web", "Desktop", "IoT"]
+// for(let i = 0; i <arr.length; i++) {
+//   console.log(arr[i])
+// }
+
+
+// const data = (eligiblity > 18) 
+
+// const age = parseInt(prompt("Enter the age: "))
+// if(age>18) {
+//     console.log("Adult")
+// } else {
+//     console.log("Minor")
+// }
+
+// const check = (age >= 18) ? "Adult" : "Minor"
+// console.log(check)
+
+// let data = "Reshab";
+
+
+// let check = age ?? "I don't have data, Please provide data"
+console.log(new Date().getMilliseconds())
+
+
+
+// switch(new Date().getDay()) {
+//   case 0:
+//   console.log("Sunday")
+//   break
+//   case 4:
+//   console.log("Thursday")
+//   break
+// }
+
+
+
+
+
+
+
+
+

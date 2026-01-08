@@ -1,0 +1,19 @@
+Even or Odd Checker: Write a program that uses an if...else statement to check if a given number is even or odd.
+
+Number Sign Detector: Create a script that takes a number and prints whether it is positive, negative, or zero using an if...else if ladder.
+
+Basic Counting: Write a for loop that prints the numbers from 1 to 10 in the console.
+
+Multiples of Five: Use a for loop to print all multiples of 5 between 1 and 50.
+
+FizzBuzz: Write a program that iterates from 1 to 100. For multiples of three, print "Fizz" instead of the number, and for multiples of five, print "Buzz". For numbers that are multiples of both, print "FizzBuzz".
+
+Sum of an Array: Create a for loop that calculates and prints the sum of all numerical elements in an array.
+
+Grade Calculator: Write a program that assigns a letter grade (A, B, C, D, F) based on a numerical score using if...else if statements (e.g., >90 is "A", >80 is "B").
+
+Vowel Counter: Write a function that uses a for loop and an if statement to count the number of vowels in a given string.
+
+Prime Number Checker: Create a script that uses a for loop and if statements to determine if a given number is a prime number.
+
+Find the Largest Element: Write a program that iterates through an array using a for loop and uses an if statement to find and print the largest number in that array.
