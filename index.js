@@ -1,4 +1,6 @@
-// // var a = 10;
+// something()
+
+// var a = 10;
 // // console.log('Hii',a)
 // // var a = 12;
 // // a = 14;
@@ -111,7 +113,7 @@
 
 
 // let check = age ?? "I don't have data, Please provide data"
-console.log(new Date().getMilliseconds())
+// console.log(new Date().getMilliseconds())
 
 
 
@@ -123,6 +125,96 @@ console.log(new Date().getMilliseconds())
 //   console.log("Thursday")
 //   break
 // }
+
+
+// function something() {
+//   console.log('Hello World')
+
+// }
+// let num = 2
+// function something(a) {
+//   const c = a + a + num
+//   console.log('Hello World Part -2', c)
+// }
+
+// const something1 = () => {
+//   console.log('Hello Coding Thinker')
+// }
+// something(5)
+// something1()
+
+
+// function something() {
+//   const a = 5;
+//   console.log('Hello World', a)
+// }
+
+
+// Take input Rank (number)
+// create a function which checks rank < 100 returns output true else false
+// Print msg based on TRue or False and only apply ternary operator
+
+// const rank = parseInt(prompt('Enter rank: '))
+
+// function checkRank() {
+//   let check = (rank < 100) ? true : false
+//   return check
+// }
+
+// const msg = checkRank() ? "Apply for Next Step" : "Better Luck Next time"
+// console.log(msg)
+
+
+// console.log(data)
+// var data = 10;
+
+
+// let rank = 89;
+// var checkRank = () => {
+  
+//   let check = (rank < 100) ? true : false
+//   console.log('Hii')
+  
+// }
+
+// checkRank()
+//Hoisting
+
+
+
+// const data = ["A","B","C"]
+
+
+const arr = {
+  0:"A",
+  1:"B",
+  2:"C"
+}
+
+// arr.seal
+
+arr[0] = "Reshab"
+
+console.log((arr[0]))
+
+// [[0,1, [2,4, [5,6, "Reshab"]]],[1,2],[]]
+
+// const data = Object.entries(arr)
+// keys 
+//values
+//entries
+// console.log(data)
+
+
+
+// for(let x in data) {
+//   console.log(x)
+// }
+
+
+
+
+
 
 
 
