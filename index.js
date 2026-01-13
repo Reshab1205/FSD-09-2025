@@ -43,8 +43,6 @@
 //     console.log(`Enter Valid Time`)
 // }
 
-
-
 // if(a >= b) {
 //     console.log(`A is Greater`)
 // } else if (b >= a) {
@@ -90,14 +88,12 @@
 
 // console.log(facultyOfCodingThinker[1].faculty_subject);
 
-
 // const arr = ["App", "Web", "Desktop", "IoT"]
 // for(let i = 0; i <arr.length; i++) {
 //   console.log(arr[i])
 // }
 
-
-// const data = (eligiblity > 18) 
+// const data = (eligiblity > 18)
 
 // const age = parseInt(prompt("Enter the age: "))
 // if(age>18) {
@@ -111,11 +107,8 @@
 
 // let data = "Reshab";
 
-
 // let check = age ?? "I don't have data, Please provide data"
 // console.log(new Date().getMilliseconds())
-
-
 
 // switch(new Date().getDay()) {
 //   case 0:
@@ -125,7 +118,6 @@
 //   console.log("Thursday")
 //   break
 // }
-
 
 // function something() {
 //   console.log('Hello World')
@@ -143,12 +135,10 @@
 // something(5)
 // something1()
 
-
 // function something() {
 //   const a = 5;
 //   console.log('Hello World', a)
 // }
-
 
 // Take input Rank (number)
 // create a function which checks rank < 100 returns output true else false
@@ -164,63 +154,129 @@
 // const msg = checkRank() ? "Apply for Next Step" : "Better Luck Next time"
 // console.log(msg)
 
-
 // console.log(data)
 // var data = 10;
 
-
 // let rank = 89;
 // var checkRank = () => {
-  
+
 //   let check = (rank < 100) ? true : false
 //   console.log('Hii')
-  
+
 // }
 
 // checkRank()
 //Hoisting
 
-
-
 // const data = ["A","B","C"]
 
-
-const arr = {
-  0:"A",
-  1:"B",
-  2:"C"
-}
+// const arr = {
+//   name: "Reshab",
+//   roll_no: 123,
+//   name: "Ankit",
+// }
+// console.log(arr)
 
 // arr.seal
 
-arr[0] = "Reshab"
+// arr[0] = "Reshab"
 
-console.log((arr[0]))
+// console.log((arr[0]))
 
 // [[0,1, [2,4, [5,6, "Reshab"]]],[1,2],[]]
 
 // const data = Object.entries(arr)
-// keys 
+// keys
 //values
 //entries
 // console.log(data)
 
-
-
 // for(let x in data) {
 //   console.log(x)
 // }
+// console.log(a)
+// var a = 2;
+
+// console.log(a)
+// a = 2;
+// a = 4;
+
+// let txt;
+// const obj = {
+//   fname: "Reshab",
+//   lname: "Kumar",
+//   age:27,
+//   myData: function data() {
+//      txt = 'Hello'
+//     return txt
+//   }
+// }
+
+const obj = {
+  fname: "Reshab",
+  lname: "Kumar",
+  age: 27,
+  abc: {
+    city: "Vaishali",
+    state: "Bihar",
+    def: {
+      nation: "India"
+    }
+  },
+};
+// console.log(obj.abc.def.nation)
+
+// const b = Object.keys(obj);
+// const c = Object.values(obj);
+// const d = Object.entries(obj);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+// obj[age] = 29
+
+// console.log(obj[age] = 29)
+// console.log(txt)
+
+// obj.city = function
+// Object.seal(obj)
+
+// Object.freeze(obj)
+// obj.age = 28
+
+// const obj1 = new Object({
+//   fname: "Reshab",
+//   lname: "Kumar",
+//   age:27
+// })
+
+// console.log(obj1)
+
+const arr = ["A", "B", "C", "D"]
+
+// for(let x in obj) {
+//   console.log(x)
+// }
+// for(let y in arr) {
+//   console.log(y)
+// }
+
+let a;
+const obj1 = {
+  fname: "Reshab",
+  lname: "Kumar",
+  fullName: function xyz() {
+   return a = this.fname + " " + this.lname
+  }
+}
+console.log(obj1.fullName())
 
 
+function myData(fname, lname) {
+  this.first_name = fname
+  this.last_name = lname
+}
 
-
-
-
-
-
-
-
-
-
-
-
+const d = new myData("Reshab", "Kumar")
+const e = new myData("Baibhav", "Kumar")
+console.log(d)
+console.log(e)
