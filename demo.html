@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traffic Signal</title>
+
+  <style>
+    .traffic {
+      width: 120px;
+      background: #222;
+      padding: 15px;
+      border-radius: 20px;
+      margin: 50px auto;
+    }
+
+    .signal {
+      height: 80px;
+      width: 80px;
+      background: white;
+      border-radius: 50%;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="traffic">
+    <div id="red" class="signal"></div>
+    <div id="orange" class="signal"></div>
+    <div id="green" class="signal"></div>
+  </div>
+
+  <script>
+    function resetLights() {
+      document.getElementById("red").style.backgroundColor = "white";
+      document.getElementById("orange").style.backgroundColor = "white";
+      document.getElementById("green").style.backgroundColor = "white";
+    }
+
+    function startSignal() {
+      resetLights();
+      document.getElementById("red").style.backgroundColor = "red";
+
+      setTimeout(() => {
+        resetLights();
+        document.getElementById("orange").style.backgroundColor = "orange";
+      }, 3000);
+
+      setTimeout(() => {
+        resetLights();
+        document.getElementById("green").style.backgroundColor = "green";
+      }, 5000);
+    }
+
+    startSignal();
+    setInterval(startSignal, 8000);
+  </script>
+</body>
+</html>

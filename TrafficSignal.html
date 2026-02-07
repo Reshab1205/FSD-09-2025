@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .traffic {
+        display: flex;
+        /* justify-content: center; */
+        /* height: 50vh;
+            width: 50%; */
+      }
+      .signal {
+        border-radius: 50px;
+        height: 230px;
+        width: 50%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="traffic">
+      <div id="red" class="signal">Red</div>
+      <div id="orange" class="signal">Orange</div>
+      <div id="green" class="signal">Green</div>
+    </div>
+  </body>
+  <script>
+    function signal() {
+
+    
+      setTimeout(() => {
+        document.getElementById("red").style.backgroundColor = "red";
+        setTimeout(() => {
+          document.getElementById("red").style.backgroundColor = "white";
+          document.getElementById("orange").style.backgroundColor = "orange";
+        }, 3000);
+        setTimeout(() => {
+          document.getElementById("red").style.backgroundColor = "white";
+          document.getElementById("orange").style.backgroundColor = "white";
+          document.getElementById("green").style.backgroundColor = "green";
+        }, 5000);
+      });
+    }
+    signal();
+
+  </script>
+</html>

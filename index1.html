@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #img {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="img" src="./Assests/images (1).jpg" />
+    <button onclick="removeImg()">removeImage</button>
+    <button onclick="changeImg()">ChangeImage</button>
+  </body>
+  <script>
+    function removeImg() {
+      if (document.getElementById("img").style.display === "block") {
+        document.getElementById("img").style.display = "none";
+      } else {
+        document.getElementById("img").style.display = "block";
+      }
+    }
+
+    function changeImg() {
+      document.getElementById("img").style.display = "block";
+      const data = document.getElementById("img").getAttribute("src");
+
+      if (data === "./Assests/images (1).jpg") {
+        document
+          .getElementById("img")
+          .setAttribute("src", "Assests/images (2).jpg");
+      } else {
+        document
+          .getElementById("img")
+          .setAttribute("src", "./Assests/images (1).jpg");
+      }
+    }
+  </script>
+</html>

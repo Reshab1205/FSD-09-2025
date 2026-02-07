@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #para {
+            padding: 20px;
+            outline: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+
+    </div>
+    <div id="box" class="box">Hello</div>
+    <div class="box">Hii</div>
+
+    <p id="para" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eos? Reprehenderit saepe voluptate, ut incidunt aliquid maxime nihil exercitationem sapiente!</p>
+    <button onclick="changeColor()" >ChangeColor</button>
+
+
+
+
+    <script>
+        const data = document.querySelectorAll(".box")
+        // console.log(data)
+        data.forEach(item => {
+            console.log(item)
+            item.style.outline = '1px solid red'
+        })
+
+        const x = document.getElementsByClassName('box').length
+        console.log(x)
+
+        const newDiv = document.createElement("div")
+        newDiv.textContent = "Hello World"
+
+        const parent = document.getElementById('container');
+        parent.appendChild(newDiv)
+
+        document.title = 'My Webpage'
+
+        function changeColor() {
+            const colors = ['red', 'blue', 'green', 'yellow', 'hotpink']
+             let a = Math.floor(Math.random() * colors.length)
+             document.getElementById('para').style.outlineColor = colors[a]
+            
+        }
+
+
+
+        
+    </script>
+</body>
+</html>
