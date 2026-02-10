@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div>
+        <form onsubmit="register(event)" >
+            <label>FullName: </label>
+            <input type="text" id="fullname" placeholder="Enter Your FullName" required />
+            <label>MobileNumber: </label>
+            <input type="text" id="mobile_number" placeholder="Enter Your MobileNumber" required />
+            <label>Email: </label>
+            <input type="email" id="email" placeholder="Enter Your email" required />
+            <label>Password: </label>
+            <input type="password" id="password" placeholder="Enter Your password" required />
+            <label>City: </label>
+            <input type="text" id="city" placeholder="Enter Your city" required />
+            <label>State: </label>
+            <input type="text" id="state" placeholder="Enter Your State" required />
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script>
+        function register(event) {
+            event.preventDefault()
+           const fullname = document.getElementById("fullname").value
+           const mobile_number = document.getElementById("mobile_number").value
+           const email = document.getElementById("email").value
+           const password = document.getElementById("password").value
+           const city = document.getElementById("city").value
+           const state = document.getElementById("state").value
+
+           const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+           const mobileRegex = /^(?:(?:\+|0{0,2})91(\s*|[\-])?|[0]?)?([6789]\d{2}([ -]?)\d{3}([ -]?)\d{4})$/
+
+           if(passwordRegex.test(password) && mobileRegex.test(mobile_number)) {
+            const data = {fullname:fullname,mobile_number:mobile_number,email:email,password:password,city:city,state:state}
+            alert('Form Submitted', data)
+           } else {
+            alert('Wrong Format')
+           }
+           
+
+        }
+    </script>
+</body>
+</html>
