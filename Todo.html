@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>TODO App</h2>
+        <input id="todo" placeholder="Enter Your Todo here ....." required >
+        <br>
+        <button onclick="addTodo()" >AddTodo</button>
+        <ul id="displayTodo"></ul>
+
+    </div>
+    <script>
+        function addTodo() {
+            const input = document.getElementById("todo").value
+            localStorage.setItem('data', input)
+            document.getElementById("todo").value = ""
+        }
+
+        // setInterval(500, displayData())
+        setTimeout(() => {
+            displayData()
+        }, 500)
+        
+        
+
+        function displayData() {
+           const data =  localStorage.getItem('data')
+           console.log(data)
+             const parentUL = document.getElementById('displayTodo')
+            const li = document.createElement("li")
+            li.textContent = data
+            parentUL.appendChild(li)
+             
+        }
+    </script>
+</body>
+</html>

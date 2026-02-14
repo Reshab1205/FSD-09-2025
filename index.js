@@ -372,20 +372,20 @@
 //     console.log('NE')
 // }
 
-const arr = [1,2,3,4,5]
-const arr1 = [6,7,8,9]
+// const arr = [1,2,3,4,5]
+// const arr1 = [6,7,8,9]
 
-function cond() {
-    return arr > 2
-}
+// function cond() {
+//     return arr > 2
+// }
 
-const a = arr1.includes(2)
-const d = arr.every(cond)
-console.log(d)
-// console.log(f)
-// console.log(a)
+// const a = arr1.includes(2)
+// const d = arr.every(cond)
+// console.log(d)
+// // console.log(f)
+// // console.log(a)
 
-const data = arr.concat(arr1)
+// const data = arr.concat(arr1)
 // console.log(data)
 
 // console.log(arr.length)
@@ -407,3 +407,25 @@ const data = arr.concat(arr1)
 //     return data > 2
 // })
 // console.log(e)
+
+
+// const obj1 = {
+//   fname: "Reshab",
+//   lname: "Kumar",
+//   age:27,
+//   isActive:true,
+//   fullName: function xyz() {
+//    return a = this.fname + " " + this.lname
+//   }
+// }
+
+// for( let i in obj1) {
+//     console.log('first Iteration', i)
+//     if(typeof(obj1[i]) !== 'function') {
+//         console.log('2nd Iteration', i)
+//         if(typeof(obj1[i]) !== 'boolean') {
+//             console.log('3rd Iteration', i)
+//         }
+//    }
+// }
+// console.log(obj1.fullName())

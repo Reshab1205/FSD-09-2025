@@ -41,6 +41,7 @@
 
            if(passwordRegex.test(password) && mobileRegex.test(mobile_number)) {
             const data = {fullname:fullname,mobile_number:mobile_number,email:email,password:password,city:city,state:state}
+            console.log(data)
             alert('Form Submitted', data)
            } else {
             alert('Wrong Format')
