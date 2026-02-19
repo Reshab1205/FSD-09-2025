@@ -15,27 +15,41 @@
 
     </div>
     <script>
+        let arr = []
         function addTodo() {
-            const input = document.getElementById("todo").value
-            localStorage.setItem('data', input)
-            document.getElementById("todo").value = ""
+            const todo = document.getElementById('todo').value
+        if(!todo) return;
+            arr.push(todo)
+            display()
+            // arr = []
+            document.getElementById('todo').value = ""
         }
-
-        // setInterval(500, displayData())
-        setTimeout(() => {
-            displayData()
-        }, 500)
         
-        
+        function display() {
+            const parentEl = document.getElementById('displayTodo')
+            parentEl.innerHTML = ""
+            arr.forEach((item, index) => {
+                const li = document.createElement("li")
+                li.textContent = item
+                const editBtn = document.createElement("button")
+                const btn = document.createElement("button")
+                editBtn.textContent = 'Edit'
+                editBtn.onclick = function () {
+                    const value = prompt('Enter the value ', item)
+                    if(!value.trim()) return;
+                    arr[index] = value.trim()
+                    display()
+                }
+                btn.textContent = 'Del'
+                btn.onclick = function () {  
+                    arr.splice(index, 1)
+                    display()
+                }
+                li.appendChild(editBtn)
+                li.appendChild(btn)
+                parentEl.appendChild(li)
 
-        function displayData() {
-           const data =  localStorage.getItem('data')
-           console.log(data)
-             const parentUL = document.getElementById('displayTodo')
-            const li = document.createElement("li")
-            li.textContent = data
-            parentUL.appendChild(li)
-             
+            })
         }
     </script>
 </body>

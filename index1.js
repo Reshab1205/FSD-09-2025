@@ -45,17 +45,22 @@
 // console.log(parseInt(Math.random() * 900000))
 
 
-function randomString() {
-     alp = 'QWERTYUIOPLKJHGFDSAZXCVBNM'
-    alphabet = alp.charAt(Math.floor(Math.random() * alp.length))
-    alphabet1 = alp.charAt(Math.floor(Math.random() * alp.length))
+// function randomString() {
+//      alp = 'QWERTYUIOPLKJHGFDSAZXCVBNM'
+//     alphabet = alp.charAt(Math.floor(Math.random() * alp.length))
+//     alphabet1 = alp.charAt(Math.floor(Math.random() * alp.length))
 
-    return alphabet + alphabet1
+//     return alphabet + alphabet1
     
-}
+// }
 
 
-const num = parseInt(Math.random() * 9000)
-const data = randomString() + num
+// const num = parseInt(Math.random() * 9000)
+// const data = randomString() + num
 
-console.log(data)
+// console.log(data)
+
+const arr = ["Apple", "Ball", "Cat", "Dog"]
+arr.forEach((item, index)  => {
+    console.log(item, index)
+})
