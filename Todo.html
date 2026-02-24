@@ -1,56 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div>
-        <h2>TODO App</h2>
-        <input id="todo" placeholder="Enter Your Todo here ....." required >
-        <br>
-        <button onclick="addTodo()" >AddTodo</button>
-        <ul id="displayTodo"></ul>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
+      body {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      div {
+        background: white;
+        padding: 25px;
+        width: 350px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+      }
+
+      button {
+        padding: 6px 12px;
+        margin: 5px 3px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 13px;
+        transition: 0.3s ease;
+      }
+
+      button:hover {
+        opacity: 0.85;
+      }
+
+      button:first-of-type {
+        background-color: #667eea;
+        color: white;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      li {
+        list-style: none;
+        background: #f4f4f4;
+        margin-top: 8px;
+        padding: 8px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      li button {
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+
+      li button:nth-child(2) {
+        background-color: #ff9800;
+        color: white;
+      }
+
+      li button:nth-child(3) {
+        background-color: #f44336;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>TODO App</h2>
+      <input id="todo" placeholder="Enter Your Todo here ....." required />
+      <br />
+      <button onclick="addTodo()">AddTodo</button>
+      <ul id="displayTodo"></ul>
     </div>
     <script>
-        let arr = []
-        function addTodo() {
-            const todo = document.getElementById('todo').value
-        if(!todo) return;
-            arr.push(todo)
-            display()
-            // arr = []
-            document.getElementById('todo').value = ""
-        }
-        
-        function display() {
-            const parentEl = document.getElementById('displayTodo')
-            parentEl.innerHTML = ""
-            arr.forEach((item, index) => {
-                const li = document.createElement("li")
-                li.textContent = item
-                const editBtn = document.createElement("button")
-                const btn = document.createElement("button")
-                editBtn.textContent = 'Edit'
-                editBtn.onclick = function () {
-                    const value = prompt('Enter the value ', item)
-                    if(!value.trim()) return;
-                    arr[index] = value.trim()
-                    display()
-                }
-                btn.textContent = 'Del'
-                btn.onclick = function () {  
-                    arr.splice(index, 1)
-                    display()
-                }
-                li.appendChild(editBtn)
-                li.appendChild(btn)
-                parentEl.appendChild(li)
+      let arr = [];
+      function addTodo() {
+        const todo = document.getElementById("todo").value;
+        if (!todo.trim()) return;
+        arr.push({
+            text:todo,
+            completed:false
+        });
+        display();
+        // arr = []
+        document.getElementById("todo").value = "";
+      }
 
-            })
-        }
+      function display() {
+        const parentEl = document.getElementById("displayTodo");
+        parentEl.innerHTML = "";
+        arr.forEach((item, index) => {
+          const li = document.createElement("li");
+          const check = document.createElement("input");
+          check.type = "checkbox";
+          check.checked = item.completed;
+          check.onchange = function () {
+
+          }
+          li.textContent = item;
+          const editBtn = document.createElement("button");
+          const btn = document.createElement("button");
+          editBtn.textContent = "Edit";
+          editBtn.onclick = function () {
+            const value = prompt("Enter the value ", item);
+            if (!value.trim()) return;
+            arr[index] = value.trim();
+            display();
+          };
+          btn.textContent = "Del";
+          btn.onclick = function () {
+            arr.splice(index, 1);
+            display();
+          };
+          li.appendChild(check);
+          li.appendChild(editBtn);
+          li.appendChild(btn);
+          parentEl.appendChild(li);
+        });
+      }
     </script>
-</body>
+  </body>
 </html>
