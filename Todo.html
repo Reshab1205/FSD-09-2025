@@ -107,14 +107,11 @@
       <ul id="displayTodo"></ul>
     </div>
     <script>
-      let arr = [];
+      let arr = []
       function addTodo() {
         const todo = document.getElementById("todo").value;
         if (!todo.trim()) return;
-        arr.push({
-            text:todo,
-            completed:false
-        });
+        arr.push(todo);
         display();
         // arr = []
         document.getElementById("todo").value = "";
@@ -125,12 +122,12 @@
         parentEl.innerHTML = "";
         arr.forEach((item, index) => {
           const li = document.createElement("li");
-          const check = document.createElement("input");
-          check.type = "checkbox";
-          check.checked = item.completed;
-          check.onchange = function () {
+        //   const check = document.createElement("input");
+        //   check.type = "checkbox";
+        //   check.checked = item.completed;
+        //   check.onchange = function () {
 
-          }
+        //   }
           li.textContent = item;
           const editBtn = document.createElement("button");
           const btn = document.createElement("button");
@@ -146,12 +143,13 @@
             arr.splice(index, 1);
             display();
           };
-          li.appendChild(check);
+        // //   li.appendChild(check);
           li.appendChild(editBtn);
           li.appendChild(btn);
           parentEl.appendChild(li);
         });
       }
+
     </script>
   </body>
 </html>
