@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="c1" id="p1"></p>
+    <p class="c1" id="p2">Hii</p>
+    <button onclick="storeData()" >StoreData</button>
+        <button onclick="getData()" >GetData</button>
+    <script>
+
+        function getData() {
+           const data =  localStorage.getItem('data')
+           document.getElementById('p1').textContent = data
+        }
+        function storeData() {
+            localStorage.setItem('data', 'Reshab')
+            return
+        }
+        document.getElementById('p1').textContent = 'Hello'
+           const data = document.getElementById('p2').textContent
+           console.log(data)
+           console.log(document.getElementsByClassName('c1').item(0))
+    </script>
+</body>
+</html>
