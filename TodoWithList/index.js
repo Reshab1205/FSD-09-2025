@@ -8,8 +8,15 @@ function addTodo() {
   li.textContent = todo;
   const editBtn = document.createElement('button')
   editBtn.textContent = 'Edit'
-    const delBtn = document.createElement('button')
-    const pE = document.getElementById("ul");
+  editBtn.onclick = function () {
+    const newData = prompt('Enter the New Data')
+    if(newData.trim() !== "" ) {
+      li.firstChild.textContent = newData
+    }
+  }
+  const delBtn = document.createElement('button')
+  const pE = document.getElementById("ul");
+  console.log(li.firstChild.textContent)
     delBtn.textContent = 'Delete'
     delBtn.onclick = function () {
       // li.remove()

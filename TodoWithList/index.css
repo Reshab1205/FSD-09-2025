@@ -21,6 +21,7 @@
     margin: 10px;
     padding: 10px;
     justify-content: center;
+    align-items: center;
     /* flex: 1; */
     /* text-align: center; */
 }
