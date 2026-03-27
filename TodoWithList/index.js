@@ -1,3 +1,4 @@
+const data = []
 function addTodo() {
   const todo = document.getElementById("inp").value;
   if (todo.trim() === "") {
@@ -22,8 +23,15 @@ function addTodo() {
       // li.remove()
       pE.removeChild(li)
     }
+    data.push(todo)
+  localStorage.setItem('data', JSON.stringify(data))
+  console.log(  JSON.parse(localStorage.getItem('data')))
   li.appendChild(editBtn)
   li.appendChild(delBtn)
   pE.appendChild(li);
   document.getElementById("inp").value = "";
+
+  function displayTodo() {
+
+  }
 }
