@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num1" type="number" />
+    <input id="num2" type="number" />
+    <button onclick="add()" >+</button>
+    <button onclick="sub()" >-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()" >/</button>
+    <span id="result"></span>
+    
+    <script>
+        function add() {
+            const data = parseFloat(document.getElementById('num1').value) + parseFloat(document.getElementById('num2').value)
+            document.getElementById('result').textContent = data
+        }
+        function sub() {
+            const data = parseFloat(document.getElementById('num1').value) - parseFloat(document.getElementById('num2').value)
+            document.getElementById('result').textContent = data
+        }
+        function mul() {
+            const data = parseFloat(document.getElementById('num1').value) * parseFloat(document.getElementById('num2').value)
+            document.getElementById('result').textContent = data
+        }
+        function div() {
+            const data = parseFloat(document.getElementById('num1').value) / parseFloat(document.getElementById('num2').value)
+            document.getElementById('result').textContent = data
+        }
+    </script>
+</body>
+</html>
