@@ -5,7 +5,7 @@ function addTodo() {
     alert("Enter Todo");
     return;
   }
-  data.push(todo);
+  data.push({todo: todo, completed: false});
   localStorage.setItem("data", JSON.stringify(data));
   document.getElementById("inp").value = "";
   displayTodo();
@@ -16,14 +16,26 @@ function displayTodo() {
   pE.innerHTML = "";
 
   data.forEach((arr, index) => {
+    const checkbox = document.createElement('input')
+    checkbox.type = 'checkbox'
+    checkbox.onchange = function () {
+      if(checkbox.checked == true) {
+        span.style.textDecoration = 'line-through'
+      } else {
+        span.style.textDecoration = 'none'
+      }
+      data[index].completed = checkbox.checked
+      localStorage.setItem('data', JSON.stringify(data))
+    }
     const li = document.createElement("li");
-    li.textContent = arr;
+    const span = document.createElement("span")
+    span.textContent = arr.todo;
     const editBtn = document.createElement("button");
     editBtn.textContent = "Edit";
     editBtn.onclick = function () {
-      const newData = prompt("Enter Data:", data[index]);
-      if (newData !== "") {
-        data[index] = newData;
+      const newData = prompt("Enter Data:", data[index].todo);
+      if ( newData !== null && newData.trim() !== "") {
+        data[index].todo = newData;
         localStorage.setItem("data", JSON.stringify(data));
         displayTodo();
       } else {
@@ -38,6 +50,8 @@ function displayTodo() {
       localStorage.setItem("data", JSON.stringify(data));
       displayTodo();
     };
+    li.appendChild(checkbox)
+    li.appendChild(span)
     li.appendChild(editBtn);
     li.appendChild(delBtn);
     pE.appendChild(li);
