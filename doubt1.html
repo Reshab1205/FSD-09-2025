@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="inp" type="text" />
+    <button onclick="addTask()">Add</button>
+    <ul id="ul"></ul>
+    <script>
+      function addTask() {
+        const data = document.getElementById("inp").value;
+        const li = document.createElement("li");
+        const span = document.createElement('span')
+        span.textContent = data;
+        const editBtn = document.createElement("button");
+        editBtn.textContent = 'Edit'
+        editBtn.onclick = function () {
+           const newData = prompt('Enter the value', span.textContent)
+           span.textContent = newData
+        }
+        const delBtn = document.createElement("button");
+        delBtn.textContent = 'Delete'
+        delBtn.onclick = function () {
+            li.remove()
+        }
+
+        const pE = document.getElementById("ul");
+        li.appendChild(span)
+        li.appendChild(editBtn)
+        li.appendChild(delBtn)
+        pE.appendChild(li);
+        document.getElementById("inp").value = ""
+      }
+    </script>
+  </body>
+</html>

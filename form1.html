@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="register(event)" >
+      <label>FullName: </label>
+      <input id="name" type="text" />
+      <br />
+      <label>Email: </label>
+      <input id="email" type="email" />
+      <br />
+      <label>Password: </label>
+      <input id="password" type="password" />
+      <br />
+      <label>Contact: </label>
+      <input id="number" type="number" />
+      <br />
+      <label>Gender: </label>
+      <label>Male:</label>
+      <input type="radio" name="gender" value="Male" />
+      <label>Female:</label>
+      <input type="radio" name="gender" value="Female" />
+      <label>Others:</label>
+      <input type="radio" name="gender" value="Others" />
+      <br />
+      <button type="submit">Register</button>
+    </form>
+
+    <div id="div"></div>
+    <script>
+        function register(event) {
+            event.preventDefault()
+          const name = document.getElementById('name').value
+           const email =  document.getElementById('email').value
+           const password = document.getElementById('password').value
+           const contact =  document.getElementById('number').value
+            // const gender = document.getElementsByName('gender')
+            // console.log(gender)
+
+           const div =  document.createElement("div")
+           div.innerHTML = `
+           <h3>${name}</h3>
+           <p>${email}</p>
+           `
+           const pE = document.getElementById('div')
+           pE.appendChild(div)
+
+
+        }
+    </script>
+  </body>
+</html>
