@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <form onsubmit="register(event)" >
+    <form onsubmit="register(event)">
       <label>FullName: </label>
       <input id="name" type="text" />
       <br />
@@ -32,25 +32,23 @@
 
     <div id="div"></div>
     <script>
-        function register(event) {
-            event.preventDefault()
-          const name = document.getElementById('name').value
-           const email =  document.getElementById('email').value
-           const password = document.getElementById('password').value
-           const contact =  document.getElementById('number').value
-            // const gender = document.getElementsByName('gender')
-            // console.log(gender)
+      function register(event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const contact = document.getElementById("number").value;
+        // const gender = document.getElementsByName('gender')
+        // console.log(gender)
 
-           const div =  document.createElement("div")
-           div.innerHTML = `
+        const div = document.createElement("div");
+        div.innerHTML = `
            <h3>${name}</h3>
            <p>${email}</p>
-           `
-           const pE = document.getElementById('div')
-           pE.appendChild(div)
-
-
-        }
+           `;
+        const pE = document.getElementById("div");
+        pE.appendChild(div);
+      }
     </script>
   </body>
 </html>
