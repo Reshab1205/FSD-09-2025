@@ -64,24 +64,24 @@
 // fetchAtmType(cashWithDrawl, verifyAtmPin)
 
 
-function getUser(callback) {
-  setTimeout(() => {
-    callback({id:1, name: "Reshab"})
-  }, 1000)
-}
+// function getUser(callback) {
+//   setTimeout(() => {
+//     callback({id:1, name: "Reshab"})
+//   }, 1000)
+// }
 
-function getOrders(user, callback) {
-  setTimeout(() => {
-    callback(["Order1", "Order2", "Order3"])
-  }, 1000)
-}
+// function getOrders(user, callback) {
+//   setTimeout(() => {
+//     callback(["Order1", "Order2", "Order3"])
+//   }, 1000)
+// }
 
-function getOrderDetails(callback) {
-  setTimeout(() => {
+// function getOrderDetails(callback) {
+//   setTimeout(() => {
 
-  }, 1000)
-}
+//   }, 1000)
+// }
 
-getUser( function ({id: user}) {
-  getOrders()
-})
+// getUser( function ({id: user}) {
+//   getOrders()
+// })
