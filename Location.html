@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="success()">Get Location</button>
+    <p id="demo"></p>
+
+    <script>
+      function success(position) {
+        window.navigator.geolocation.getCurrentPosition(success);
+        console.log(position)
+        let lat = position.coords.latitude;
+        let lng = position.coords.longitude;
+        geoLocation(lat, lng)
+      }
+
+      function geoLocation(lat, lng) {
+        const apiKey = "23a13401e6964d149835d8022a7fa787";
+        const url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}&key=${apiKey}`;
+        fetch(url)
+          .then((res) => res.json())
+          .then((result) => document.getElementById('demo').innerText =  result.results[0].formatted)
+          .catch((err) => document.getElementById('demo').innerText = err);
+      }
+    </script>
+  </body>
+</html>
