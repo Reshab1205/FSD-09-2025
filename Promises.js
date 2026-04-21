@@ -46,15 +46,15 @@
 // })
 // .then((data) => console.log(data))
 // .catch((err) => console.log(err))
-let lat = 23.233525031142076;
-let lng = 77.4407532553543;
-const apiKey = '23a13401e6964d149835d8022a7fa787'
-const url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}&key=${apiKey}`
+// let lat = 23.233525031142076;
+// let lng = 77.4407532553543;
+// const apiKey = '23a13401e6964d149835d8022a7fa787'
+// const url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}&key=${apiKey}`
 
-fetch(url)
-.then((res) => res.json())
-.then((result) => console.log(result.results[0].formatted))
-.catch((err) => console.log(err))
+// fetch(url)
+// .then((res) => res.json())
+// .then((result) => console.log(result.results[0].formatted))
+// .catch((err) => console.log(err))
 
 
 // [
