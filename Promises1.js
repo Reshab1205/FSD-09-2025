@@ -57,15 +57,15 @@
 //async / await
 //try/catch
 
-//  async function getLocation() {
-//     try {
-//         const data = await fetch(url)
-//         const result = await data.json()
-//         console.log(result.results[0].formatted)
-//     } catch(err) {
-//         console.log(err)
-//     }
-// }
+ async function getLocation() {
+    try {
+        const data = await fetch(url)
+        const result = await data.json()
+        console.log(result.results[0].formatted)
+    } catch(err) {
+        console.log(err)
+    }
+}
 
 // getLocation()
 
