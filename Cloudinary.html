@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="register(event)" >
+        <input id="name" type="text" />
+        <input id="file" type="file" />
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+       async function register(event) {
+            event.preventDefault()
+            const name = document.getElementById('name').value
+            const file = document.getElementById('file').files[0]
+            const cloudName = 'dbc1h4dym'
+            const formData = new FormData();
+            formData.append('upload_preset', 'my_data')
+            formData.append('file', file)
+            const url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
+            try {
+               const res =  await fetch(url, {
+                    method: 'POST',
+                    body:formData
+                })
+                // console.log(res)
+              const data =  await res.json()
+              const userData = {
+                name:name,
+                img_url:data.secure_url
+              }
+
+              localStorage.setItem('data', JSON.stringify(userData))
+            //   await fetch(url1, {
+            //     method:'POST',
+            //     body:userData
+            //   })
+            //   console.log(data.secure_url)
+            } catch(err) {
+                console.log(err)
+            }
+        }
+    </script>
+</body>
+</html>

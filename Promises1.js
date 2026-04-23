@@ -57,31 +57,31 @@
 //async / await
 //try/catch
 
- async function getLocation() {
-    try {
-        const data = await fetch(url)
-        const result = await data.json()
-        console.log(result.results[0].formatted)
-    } catch(err) {
-        console.log(err)
-    }
-}
+//  async function getLocation() {
+//     try {
+//         const data = await fetch(url)
+//         const result = await data.json()
+//         console.log(result.results[0].formatted)
+//     } catch(err) {
+//         console.log(err)
+//     }
+// }
 
-// getLocation()
+// // getLocation()
 
-const arr = [1, 2, 3, 4, 5];
-const arr1 = [6, 7, 8, 9, 10];
-const arr2 = [11, 12, 13, 14, 15];
+// const arr = [1, 2, 3, 4, 5];
+// const arr1 = [6, 7, 8, 9, 10];
+// const arr2 = [11, 12, 13, 14, 15];
 
-for (let i in arr) {
-  console.log(i);
-  console.log(arr[i]);
-}
-for (let i in arr1) {
-  console.log(i);
-  console.log(arr1[i]);
-}
-for (let i in arr2) {
-  console.log(i);
-  console.log(arr2[i]);
-}
+// for (let i in arr) {
+//   console.log(i);
+//   console.log(arr[i]);
+// }
+// for (let i in arr1) {
+//   console.log(i);
+//   console.log(arr1[i]);
+// }
+// for (let i in arr2) {
+//   console.log(i);
+//   console.log(arr2[i]);
+// }
